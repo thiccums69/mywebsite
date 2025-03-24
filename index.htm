@@ -11,7 +11,32 @@
             text-align: center;
             padding: 20px;
             color: #555;
+            margin-left: 250px; /* Offset content for sidebar */
         }
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #FAE3D9;
+            padding-top: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar a {
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            color: #6A0572;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .sidebar a:hover {
+            background-color: #FF847C;
+            color: white;
+        }
+        /* Content Container */
         .container {
             background: #FAE3D9;
             padding: 20px;
@@ -47,6 +72,13 @@
     </style>
 </head>
 <body>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <a href="page2.html">Welcome to Hollywood</a> <!-- Link to the second page -->
+        <!-- Add more links as needed -->
+    </div>
+
     <div class="container">
         <h1>Welcome to Jeremy Jackson Village!</h1>
         <p>Enjoy this viral video and have a great day! Can you all Klarna me like 3 quid im tetering on the verge of financial liquidation if I cant pay my Tax</p>
@@ -58,10 +90,14 @@
 
     <script>
         function changeBackgroundColor() {
-            const colors = ["#FF847C", "#FAE3D9", "#6A0572", "#FFB6B9", "#D4A5A5"];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            const pastelColors = [
+                "#FAD0C5", "#D3B8AE", "#FFB3BA", "#B2F7EF", "#FFB6B9", 
+                "#B5EAD7", "#FFE156", "#FCE4EC", "#B3CDE0", "#FF9AA2"
+            ];
+            const randomColor = pastelColors[Math.floor(Math.random() * pastelColors.length)];
             document.body.style.backgroundColor = randomColor;
         }
     </script>
+
 </body>
 </html>
