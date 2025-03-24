@@ -31,6 +31,19 @@
             height: 315px;
             border-radius: 10px;
         }
+        .color-button {
+            background-color: #6A0572;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .color-button:hover {
+            background-color: #9B1D4B;
+        }
     </style>
 </head>
 <body>
@@ -38,6 +51,17 @@
         <h1>Welcome to Jeremy Jackson Village!</h1>
         <p>Enjoy this viral video and have a great day! Can you all Klarna me like 3 quid im tetering on the verge of financial liquidation if I cant pay my Tax</p>
         <iframe src="https://www.youtube.com/embed/EnhdEsA76m0" frameborder="0" allowfullscreen></iframe>
+        
+        <!-- Interactive Button for Background Color Change -->
+        <button class="color-button" onclick="changeBackgroundColor()">Change Background Color</button>
     </div>
+
+    <script>
+        function changeBackgroundColor() {
+            const colors = ["#FF847C", "#FAE3D9", "#6A0572", "#FFB6B9", "#D4A5A5"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
 </body>
 </html>
