@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nick Givesmanhat</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+            color: white;
+            font-size: 10rem;
+            font-family: Arial;
+        }
+    </style>
+</head>
+<body>
+    NICK GIVESMANHAT
+</body>
+</html>
