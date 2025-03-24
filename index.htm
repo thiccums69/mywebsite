@@ -3,100 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome!</title>
+    <title>Cyberpunk Terminal</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
-            background-color: #FFFAF0;
-            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            color: #00ffea;
+            margin: 0;
             padding: 20px;
-            color: #555;
-            margin-left: 250px; /* Offset content for sidebar */
+            min-height: 100vh;
+            position: relative;
         }
-        /* Sidebar Styles */
+
+        /* Cyberpunk Grid Background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(0,255,234,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,234,0.1) 1px, transparent 1px),
+                radial-gradient(circle, #00ffea 10%, transparent 10%);
+            background-size: 40px 40px, 40px 40px, 200px 200px;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
         .sidebar {
             position: fixed;
             top: 0;
             left: 0;
-            height: 100%;
             width: 250px;
-            background-color: #FAE3D9;
-            padding-top: 20px;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            height: 100vh;
+            background: linear-gradient(180deg, #111 0%, #222 100%);
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,255,234,0.5);
         }
+
         .sidebar a {
             display: block;
-            padding: 12px;
+            color: #00ffea;
             text-decoration: none;
-            color: #6A0572;
-            font-size: 18px;
-            margin-bottom: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+            font-size: 1.1em;
         }
+
         .sidebar a:hover {
-            background-color: #FF847C;
-            color: white;
+            border-left-color: #ff00ea;
+            color: #ff00ea;
+            transform: translateX(10px);
+            text-shadow: 0 0 10px #ff00ea;
         }
-        /* Content Container */
+
         .container {
-            background: #FAE3D9;
-            padding: 20px;
+            margin-left: 280px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.6);
             border-radius: 15px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: auto;
+            box-shadow: 0 0 20px rgba(0,255,234,0.5);
+            backdrop-filter: blur(10px);
         }
+
         h1 {
-            color: #FF847C;
+            color: #00ffea;
+            text-shadow: 0 0 20px #00ffea;
+            letter-spacing: 2px;
+            animation: glitch 2s infinite;
         }
+
         p {
-            color: #6A0572;
+            color: #00ffea;
+            line-height: 1.6;
+            text-shadow: 0 0 5px rgba(0,255,234,0.5);
         }
+
         iframe {
-            width: 100%;
-            height: 315px;
+            border: 2px solid #00ffea;
             border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 0 20px rgba(0,255,234,0.5);
         }
-        .color-button {
-            background-color: #6A0572;
-            color: white;
-            padding: 10px 20px;
+
+        .neon-button {
+            background: linear-gradient(45deg, #00ffea 0%, #ff00ea 100%);
             border: none;
-            border-radius: 5px;
+            padding: 15px 30px;
+            color: #000;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 10px;
             cursor: pointer;
-            margin-top: 20px;
-            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0,255,234,0.5);
         }
-        .color-button:hover {
-            background-color: #9B1D4B;
+
+        .neon-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255,0,234,0.8);
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        /* Holographic Effect */
+        .hologram {
+            position: relative;
+            padding: 20px;
+        }
+
+        .hologram::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(transparent 50%, rgba(0,255,234,0.2) 50%);
+            animation: hologram 2s infinite;
+        }
+
+        @keyframes hologram {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 100%; }
         }
     </style>
 </head>
 <body>
-
-    <!-- Updated Sidebar -->
     <div class="sidebar">
-        <a href="Page2.html">Welcome to Hollywood</a>
-        <a href="enemies.html">Enemies of the State</a>
+        <a href="Page2.html">Neon City</a>
+        <a href="enemies.html">Data Shadows</a>
+        <a href="#">Cybernetics</a>
+        <a href="#">Black Market</a>
     </div>
 
     <div class="container">
-        <h1>Welcome to Jeremy Jackson Village!</h1>
-        <p>Enjoy this viral video and have a great day! Can you all Klarna me like 3 quid im teetering on the verge of financial liquidation if I can't pay my Tax</p>
+        <div class="hologram">
+            <h1>ACCESS GRANTED</h1>
+            <p>WELCOME TO THE NEON GRID</p>
+            <p>WARNING: Financial systems unstable. Immediate crypto transfer required to avoid neural lockdown.</p>
+        </div>
+        
         <iframe src="https://www.youtube.com/embed/EnhdEsA76m0" frameborder="0" allowfullscreen></iframe>
         
-        <button class="color-button" onclick="changeBackgroundColor()">Change Background Color</button>
+        <button class="neon-button" onclick="initiateHack()">Initiate Protocol</button>
     </div>
 
     <script>
-        function changeBackgroundColor() {
-            const pastelColors = [
-                "#FAD0C5", "#D3B8AE", "#FFB3BA", "#B2F7EF", "#FFB6B9", 
-                "#B5EAD7", "#FFE156", "#FCE4EC", "#B3CDE0", "#FF9AA2"
-            ];
-            const randomColor = pastelColors[Math.floor(Math.random() * pastelColors.length)];
-            document.body.style.backgroundColor = randomColor;
+        function initiateHack() {
+            const colors = ["#00ffea", "#ff00ea", "#ea00ff", "#00ea00", "#ffea00"];
+            
+            // Glitch effect
+            document.querySelector('h1').style.animation = 'glitch 0.5s';
+            setTimeout(() => {
+                document.querySelector('h1').style.animation = '';
+            }, 500);
+
+            // Color pulse
+            document.querySelectorAll('.neon-button').forEach(btn => {
+                btn.style.boxShadow = `0 0 30px ${colors[Math.floor(Math.random()*colors.length)]}`;
+            });
         }
     </script>
-
 </body>
 </html>
