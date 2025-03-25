@@ -5,152 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome!</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
         
         :root {
-            --neon-blue: #00ffea;
-            --neon-pink: #ff00ea;
-            --dark-bg: #1a1a1a;
+            --pastel-bg: #F8EDE3;
+            --pastel-accent: #D8BFD8;
+            --text-color: #4A4A4A;
+            --soft-pink: #FFD7E5;
+            --soft-lavender: #E6E6FA;
+            --warm-beige: #FFF5E1;
         }
         
         body {
-            font-family: 'Orbitron', sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
-            color: var(--neon-blue);
+            font-family: 'Exo 2', sans-serif;
+            background-color: var(--pastel-bg);
+            color: var(--text-color);
             margin: 0;
             padding: 20px;
-            position: relative;
+            line-height: 1.6;
         }
 
-        /* Original links preserved */
+        /* Bauhaus-style block elements */
         .sidebar {
             position: fixed;
             top: 0;
             left: 0;
             width: 250px;
             height: 100vh;
-            background: linear-gradient(180deg, #111 0%, #222 100%);
+            background: #E6E6FA;
             padding: 20px;
-            box-shadow: 0 0 20px var(--neon-blue);
+            box-shadow: 4px 0 8px rgba(0,0,0,0.1);
+            border-right: 2px solid #D8BFD8;
         }
 
         .sidebar a {
             display: block;
-            color: var(--neon-blue);
+            color: #6A0572;
             text-decoration: none;
             padding: 15px;
             margin: 10px 0;
-            border-left: 4px solid transparent;
+            background: #FFF5E1;
             transition: all 0.3s ease;
-            font-size: 1.1em;
+            font-weight: 700;
+            border: 2px solid #D8BFD8;
         }
 
         .sidebar a:hover {
-            border-left-color: var(--neon-pink);
-            color: var(--neon-pink);
+            background: #FFD7E5;
             transform: translateX(10px);
-            text-shadow: 0 0 10px var(--neon-pink);
+            border-color: #FFD7E5;
         }
 
         .container {
             margin-left: 280px;
             padding: 30px;
-            background: rgba(0, 0, 0, 0.6);
-            border-radius: 15px;
-            box-shadow: 0 0 20px var(--neon-blue);
-            backdrop-filter: blur(10px);
+            background: #FFF5E1;
+            border: 2px solid #D8BFD8;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         h1 {
-            color: var(--neon-blue);
-            text-shadow: 0 0 20px var(--neon-blue);
+            color: #6A0572;
+            font-weight: 700;
+            text-transform: uppercase;
             letter-spacing: 2px;
-            animation: glitch 2s infinite;
+            border-bottom: 4px solid #D8BFD8;
+            padding-bottom: 10px;
         }
 
         p {
-            color: var(--neon-blue);
-            line-height: 1.6;
-            text-shadow: 0 0 5px rgba(0,255,234,0.5);
+            color: #555;
+            font-weight: 400;
+            line-height: 1.8;
         }
 
         iframe {
-            border: 2px solid var(--neon-blue);
-            border-radius: 10px;
+            border: 4px solid #D8BFD8;
             margin: 20px 0;
-            box-shadow: 0 0 20px var(--neon-blue);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
             width: 100%;
             height: 315px;
         }
 
         .color-button {
-            background: linear-gradient(45deg, var(--neon-blue) 0%, var(--neon-pink) 100%);
+            background: linear-gradient(180deg, #D8BFD8 50%, #FFD7E5 50%);
             border: none;
             padding: 15px 30px;
-            color: #000;
-            font-size: 1.1em;
-            font-weight: bold;
-            border-radius: 10px;
+            color: #4A4A4A;
+            font-size: 16px;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 0 20px var(--neon-blue);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
         .color-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 0 30px var(--neon-pink);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
         }
 
-        @keyframes glitch {
-            0% { transform: translate(0); }
-            20% { transform: translate(-2px, 2px); }
-            40% { transform: translate(-2px, -2px); }
-            60% { transform: translate(2px, 2px); }
-            80% { transform: translate(2px, -2px); }
-            100% { transform: translate(0); }
+        /* Remove all rounded corners */
+        * {
+            border-radius: 0 !important;
         }
     </style>
 </head>
 <body>
-    <!-- Original sidebar links preserved -->
     <div class="sidebar">
         <a href="Page2.html">Welcome to Hollywood</a>
         <a href="enemies.html">Enemies of the State</a>
     </div>
 
     <div class="container">
-        <!-- Original heading preserved -->
         <h1>Welcome to Jeremy Jackson Village!</h1>
-        
-        <!-- Original text content preserved -->
         <p>Enjoy this viral video and have a great day! Can you all Klarna me like 3 quid im teetering on the verge of financial liquidation if I can't pay my Tax</p>
-        
-        <!-- Original YouTube embed preserved -->
         <iframe src="https://www.youtube.com/embed/EnhdEsA76m0" frameborder="0" allowfullscreen></iframe>
-        
-        <!-- Original button with preserved text -->
         <button class="color-button" onclick="changeBackgroundColor()">Change Background Color</button>
     </div>
 
     <script>
         function changeBackgroundColor() {
-            const cyberColors = [
-                "#00ffea", "#ff00ea", "#ea00ff", "#00ea00", "#ffea00",
-                "#00aaff", "#ff00aa", "#aa00ff", "#00ffaa", "#ffaa00"
+            const pastelColors = [
+                "#F8EDE3", "#FFE6EE", "#F5E6FF", "#E6E6FA", 
+                "#FFD7E5", "#FFF5E1", "#D8BFD8", "#E0D2C3"
             ];
             
-            // Glitch effect
-            document.querySelector('h1').style.animation = 'glitch 0.5s';
-            setTimeout(() => {
-                document.querySelector('h1').style.animation = '';
-            }, 500);
-
-            // Color change
-            const randomColor = cyberColors[Math.floor(Math.random() * cyberColors.length)];
+            const randomColor = pastelColors[Math.floor(Math.random() * pastelColors.length)];
             document.body.style.backgroundColor = randomColor;
             
             // Button feedback
-            document.querySelector('.color-button').style.boxShadow = `0 0 30px ${randomColor}`;
+            document.querySelector('.color-button').style.boxShadow = `0 0 15px ${randomColor}`;
         }
     </script>
 </body>
