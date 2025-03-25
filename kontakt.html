@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nick Givesmanhat</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bauhaus+93&display=swap');
+        
+        :root {
+            --pastel-bg: #F8EDE3;
+            --accent: #D8BFD8;
+            --text: #4A4A4A;
+        }
+        
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--pastel-bg);
+            font-family: 'Bauhaus 93', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
 
+        /* Bauhaus geometric elements */
+        .shape {
+            position: absolute;
+            background: var(--accent);
+        }
+
+        .rect-1 {
+            width: 500px;
+            height: 200px;
+            top: 15%;
+            left: -5%;
+            transform: rotate(-10deg);
+        }
+
+        .rect-2 {
+            width: 400px;
+            height: 150px;
+            bottom: 10%;
+            right: -8%;
+            transform: rotate(12deg);
+        }
+
+        .circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: var(--accent);
+            opacity: 0.3;
+            bottom: -10%;
+            right: 15%;
+        }
+
+        h1 {
+            font-size: 8vw;
+            color: var(--text);
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            position: relative;
+            z-index: 1;
+            line-height: 1;
+            border: 6px solid var(--accent);
+            padding: 30px 60px;
+            background: white;
+        }
+
+        /* Remove all rounded corners */
+        * {
+            border-radius: 0 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="rect-1 shape"></div>
+    <div class="rect-2 shape"></div>
+    <div class="circle shape"></div>
+    <h1>Email:
+    Phone Number:
+    Address: 
+    National Insurance Number:</h1>
+</body>
+</html>
